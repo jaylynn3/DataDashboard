@@ -40,18 +40,17 @@ function App() {
   ).length;
 
   return (
-    <div className="App">
-      <h1>Recipe Data Dashboard ⟡🍽️₊˚⊹♡</h1>
+  
+  <div className="App">
+    <h1 className="recipe">Recipe Data Dashboard ⟡🍽️₊˚⊹♡</h1>
+
+    <div className="box">
 
 
-      
-      <div className="stats">
-        <p>Total Recipes: {totalRecipes}</p>
-        <p>Average Ready Time: {avgReadyTime.toFixed(1)} mins</p>
-        <p>Vegetarian Recipes: {vegetarianCount}</p>
-      </div>
+  <div className="container">
 
-     
+   
+    <div className="controls">
       <input
         type="text"
         placeholder="Search recipes..."
@@ -64,21 +63,32 @@ function App() {
         <option value="Mexican">Mexican</option>
         <option value="American">American</option>
       </select>
-
-      <div className="list">
-        {filteredRecipes.map((recipe) => (
-          <div className="card" key={recipe.id}>
-            <h3>{recipe.title}</h3>
-            <img src={recipe.image} alt={recipe.title} width="120" />
-            <p>Ready in: {recipe.readyInMinutes} mins</p>
-            <p>
-              Cuisine: {recipe.cuisines[0] || "N/A"}
-            </p>
-          </div>
-        ))}
-      </div>
     </div>
-  );
+
+  
+    <p>Total Recipes: {totalRecipes}</p>
+    <p>Average Ready Time: {avgReadyTime.toFixed(1)} mins</p>
+    <p>Vegetarian Recipes: {vegetarianCount}</p>
+
+  </div>
+
+ 
+  <div className="main">
+    <div className="list">
+      {filteredRecipes.map((recipe) => (
+        <div className="card" key={recipe.id}>
+          <h3>{recipe.title}</h3>
+          <img src={recipe.image} alt={recipe.title} width="120" />
+          <p>Ready in: {recipe.readyInMinutes} mins</p>
+          <p>Cuisine: {recipe.cuisines[0] || "N/A"}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+</div>
+  </div>
+);
 }
 
 export default App;
