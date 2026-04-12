@@ -4,7 +4,7 @@
   
 }
 .container{
-  width: 150px;
+  width: 250px;
   height:fit-content;
   background-color: #f4f4f4;
   padding: 20px;
@@ -19,7 +19,7 @@
 
 .controls {
   display: flex;
-  flex-direction: column; /* stack vertically */
+  flex-direction: column; 
   gap: 10px;
   margin-bottom: 20px;
   
@@ -30,4 +30,52 @@
 }
 
 .App{
+  text-align: left;
+}
+
+.chartSection {
+  display: flex;
+  flex-direction: column;
+ 
+  margin-top: 10px;
+  font-size: smaller;
+}
+
+.chart1, .chart2 {
+  background-color: white;
+  margin: 10px;
+}
+
+.chartTitle {
+  font-size: smaller;
+  margin-bottom: 5px;
+  margin-top: 50px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:visited {
+  color: #555;
+}
+
+a:active {
+  color: #888;
 }
